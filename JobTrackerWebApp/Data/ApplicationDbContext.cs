@@ -11,5 +11,6 @@ namespace JobTrackerWebApp.Data
         {
         }
         public DbSet<JobTrackerWebApp.Data.Job>? Job { get; set; }
+        public DbSet<JobTrackerWebApp.Data.Follow>? Follow { get; set; }
     }
 }

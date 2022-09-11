@@ -14,6 +14,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,3 +40,13 @@ app.UseAuthorization();
 app.MapRazorPages();
 
 app.Run();
+
+//builder.Services.AddSwaggerGen();
+
+
+//// Configure the HTTP request pipeline.
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}

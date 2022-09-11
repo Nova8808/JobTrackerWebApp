@@ -1,0 +1,35 @@
+﻿@page
+@model JobTrackerWebApp.Pages.FollowupsModel
+@{
+	ViewData["Title"] = "Follow Ups";
+}
+<div class="follow-ups-header">Follow Ups</div>
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Follow.CompanyName" class="control-label"></label>
+        <input asp-for="Follow.CompanyName" class="form-control" />
+        <span asp-validation-for="Follow.CompanyName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Follow.Info" class="control-label"></label>
+        <input asp-for="Follow.Info" class="form-control" />
+        <span asp-validation-for="Follow.Info" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+    
+
+@foreach (var item in Model.FollowList) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Info)
+            </td>
+        </tr>
+}
