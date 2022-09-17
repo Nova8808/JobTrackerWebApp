@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JobTrackerWebApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("job")]
     [ApiController]
     public class JobsAPIController : ControllerBase
     {
