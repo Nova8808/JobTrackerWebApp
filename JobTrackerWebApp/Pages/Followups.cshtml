@@ -23,7 +23,7 @@
 
     
 
-@foreach (var item in Model.FollowList) {
+@*@foreach (var item in Model.FollowList) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.CompanyName)
@@ -32,4 +32,31 @@
                 @Html.DisplayFor(modelItem => item.Info)
             </td>
         </tr>
-}
+}*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FollowList[0].CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FollowList[0].Info)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.FollowList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
